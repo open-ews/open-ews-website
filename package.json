@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@tabler/core": "^1.2.0",
+    "@tabler/icons-webfont": "^3.31.0",
     "astro": "^5.7.11",
     "sass": "^1.87.0"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
