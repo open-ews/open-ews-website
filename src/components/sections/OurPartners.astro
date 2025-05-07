@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+import GSMALogo from "@/assets/images/GSMA_logo.png";
+import PINLogo from "@/assets/images/People_in_Need_logo.png";
+import UnicefLogo from "@/assets/images/unicef_logo.png";
+
+const partners = [
+  { logo: GSMALogo, name: "GSMA" },
+  { logo: PINLogo, name: "PIN" },
+  { logo: UnicefLogo, name: "Unicef" },
+];
+---
+
+<div class="container">
+  <div class="section-header mb-6">
+    <h2 class="section-title text-secondary">Our Partners</h2>
+  </div>
+  <div class="row g-8 align-items-center justify-content-center">
+    {
+      partners.map((partner) => (
+        <div class="col-auto">
+          <Image
+            src={partner.logo}
+            alt={`${partner.name}'s Logo`}
+            width="200"
+            class="img-fluid"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

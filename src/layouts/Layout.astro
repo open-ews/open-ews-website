@@ -1,5 +1,8 @@
 ---
-import "../assets/styles/application.scss";
+import "@/assets/styles/application.scss";
+
+import SiteHeader from "@/components/SiteHeader.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
 
 const { title = "OpenEWS" } = Astro.props;
 ---
@@ -15,6 +18,10 @@ const { title = "OpenEWS" } = Astro.props;
     </style>
   </head>
   <body>
+    <SiteHeader />
+
     <slot />
+
+    <SiteFooter />
   </body>
 </html>

@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+import DemoScreen from "@/assets/images/demo-screen.png";
+---
+
+<div class="container">
+  <h1 class="hero-title">
+    The world's first Open Source <br />
+    Emergency Warning System Dissemination Platform
+  </h1>
+  <p class="hero-description hero-description-wide">
+    OpenEWS is intended to be used by Governments and/or NGOs acting on behalf
+    of Governments to disseminate warning messages to beneficiaries in case of a
+    natural disaster or other public health emergency.
+  </p>
+
+  <div class="hero-img img-overlap-margin">
+    <Image src={DemoScreen} alt="Demo" class="img-fluid" />
+  </div>
+</div>
