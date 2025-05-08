@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    # branches: [main]
 
 jobs:
   build:
@@ -14,6 +14,9 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
+
+      - name: Install Dependencies
+        run: npm ci
 
       - name: Build
         run: npm run build
