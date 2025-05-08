@@ -20,3 +20,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-ews-website
+          path: dist/
