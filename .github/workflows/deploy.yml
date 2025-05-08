@@ -26,3 +26,17 @@ jobs:
         with:
           name: open-ews-website
           path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Documentation Source
+        uses: actions/download-artifact@v4
+        with:
+          name: open-ews-website
+          path: website
+
+      - name: Deploy to S3
+        run: ls website
