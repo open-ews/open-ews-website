@@ -39,29 +39,19 @@ resource "aws_s3_bucket_website_configuration" "website" {
   }
 }
 
+data "aws_iam_policy_document" "website" {
+  statement {
+    actions = [
+      "s3:GetObject",
+    ]
+
+    resources = [
+      "${aws_s3_bucket.website.arn}/*",
+    ]
+  }
+}
+
 resource "aws_s3_bucket_policy" "website" {
   bucket = aws_s3_bucket.website.id
-
-  policy = <<POLICY
-{
-  "Version":"2012-10-17",
-  "Statement": [
-    {
-      "Effect":"Allow",
-      "Principal": "*",
-      "Action": [
-        "s3:GetObject"
-      ],
-      "Resource":[
-        "${aws_s3_bucket.website.arn}/*"
-      ]
-    }
-  ]
+  policy = data.aws_iam_policy_document.website.json
 }
-POLICY
-
-  depends_on = [
-    aws_s3_bucket_public_access_block.website
-  ]
-}
-
