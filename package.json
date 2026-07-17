@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tabler/core": "^1.4.0",
-    "@tabler/icons-webfont": "^3.44.0",
+    "@tabler/icons-webfont": "^3.45.0",
     "astro": "^7.1.0",
     "sass": "^1.101.0"
   },
