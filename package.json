@@ -11,7 +11,7 @@
   "dependencies": {
     "@tabler/core": "^1.4.0",
     "@tabler/icons-webfont": "^3.46.0",
-    "astro": "^7.2.2",
+    "astro": "^7.2.4",
     "sass": "^1.102.0"
   },
   "devDependencies": {
