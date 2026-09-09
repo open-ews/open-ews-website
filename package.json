@@ -9,7 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tabler/core": "^1.4.0",
+    "@tabler/core": "^1.5.0",
     "@tabler/icons-webfont": "^3.46.0",
     "astro": "^7.3.1",
     "sass": "^1.104.0"
