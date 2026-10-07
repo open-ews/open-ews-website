@@ -2,6 +2,8 @@ name: Build
 
 on:
   push:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -31,7 +33,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.event_name == 'schedule'
 
     steps:
       - name: Download Documentation Source
