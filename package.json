@@ -12,7 +12,7 @@
     "@tabler/core": "^1.7.3",
     "@tabler/icons-webfont": "^3.50.0",
     "astro": "^7.4.4",
-    "sass": "^1.107.0"
+    "sass": "^1.107.1"
   },
   "devDependencies": {
     "prettier": "3.9.10",
